@@ -9,7 +9,9 @@ express()
   .set('view engine', 'ejs')
   .use(bodyParser.urlencoded({ extended: false }))
   .use(bodyParser.json())
-  .get('/', (req, res) => res.render('pages/index',{message: ""}))
+  .get('/', (req, res) => {res.render('pages/index',{message: ""})
+                        res.header('Access-Control-Allow-Origin', '*');
+    })
   .post('/',(req, res) => {
     console.log(req);
     var str = req.body.link;
