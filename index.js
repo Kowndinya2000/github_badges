@@ -9,7 +9,8 @@ express()
   .set('view engine', 'ejs')
   .use(bodyParser.urlencoded({ extended: false }))
   .use(bodyParser.json())
-  .post('/',(req, res,next) => {
+  .get('/', (req, res) => res.render('pages/index',{message: ""}))
+  .post('/',(req, res) => {
     console.log(req);
     var str = req.body.link;
     const request = require('request');
