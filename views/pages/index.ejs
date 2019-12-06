@@ -102,7 +102,7 @@ class Queue
   var queue = new Queue(); 
   var flag = false;
 </script>
-    <form action="/act" method="post" name="myForm">
+    <form action="/" method="post" name="myForm">
         <input type="text" name="gitlink" id="git">
     </form>
     <script>
@@ -157,7 +157,7 @@ class Queue
               
             }
           };
-          xhttp.open("POST", "/act", false);
+          xhttp.open("POST", "/", false);
           xhttp.setRequestHeader('Content-type', "application/x-www-form-urlencoded")
           var str = str1;
           console.log(str);
