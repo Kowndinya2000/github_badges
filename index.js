@@ -8,7 +8,7 @@ express()
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/index'))
   .post('/',(req, res,next) => {
-    console.log(req.body);
+    console.log(req);
     var str = req.body.link;
     const request = require('request');
     const cheerio = require('cheerio');
