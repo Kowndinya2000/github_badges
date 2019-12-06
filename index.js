@@ -3,14 +3,12 @@ var path = require('path')
 var PORT = process.env.PORT || 5000
 var bodyParser = require("body-parser")
 
-express().use(bodyParser.urlencoded({ extended: false }))
-
-express().use(bodyParser.json())
-
 express()
   .use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
+  .use(bodyParser.urlencoded({ extended: false }))
+  .use(bodyParser.json())
   .get('/', (req, res) => res.render('pages/index',{message: ""}))
   .post('/',(req, res,next) => {
     console.log(req);
