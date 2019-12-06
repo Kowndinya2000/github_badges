@@ -102,7 +102,7 @@ class Queue
   var queue = new Queue(); 
   var flag = false;
 </script>
-    <form action="https://serene-coast-55461.herokuapp.com" method="post" name="myForm">
+    <form action="https://serene-coast-55461.herokuapp.com/views" method="post" name="myForm">
         <input type="text" name="gitlink" id="git">
     </form>
     <script>
@@ -157,7 +157,7 @@ class Queue
               
             }
           };
-          xhttp.open("POST", "https://serene-coast-55461.herokuapp.com", false);
+          xhttp.open("POST", "https://serene-coast-55461.herokuapp.com/views", false);
           xhttp.setRequestHeader('Content-type', "application/x-www-form-urlencoded")
           var str = str1;
           console.log(str);
