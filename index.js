@@ -14,6 +14,7 @@ express()
     res.header('Access-Control-Allow-Origin', '*');
     })
   .post('/',(req, res) => {
+    req.header('Access-Control-Allow-Origin', '*');
     console.log(req);
     var str = req.body.link;
     const request = require('request');
