@@ -9,7 +9,9 @@ express()
   .set('view engine', 'ejs')
   .use(bodyParser.urlencoded({ extended: false }))
   .use(bodyParser.json())
-  .use(cors())
+  .use(cors({
+      credentials: true,
+  }))
   .get('/', (req, res) => {
     res.render('pages/index',{message:""})
     res.header('Acess-Control-Allow-Credentials','true')
