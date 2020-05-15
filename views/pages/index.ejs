@@ -15,7 +15,7 @@
         margin-bottom: 2rem;
         position: relative;
         }
-        .button {
+.button {
 display: inline-block;
 border-radius: 4px;
 background-color: #f4511e;
@@ -110,7 +110,8 @@ class Queue
           
           var xhttp = new XMLHttpRequest();
           xhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
+            if (this.readyState == 4 && this.status == 200) 
+            {
               var doop = []; 
               doop = JSON.parse(this.responseText).message;
               var i;
